@@ -76,6 +76,10 @@ void GameObject::Update(int t)
 	if (mSprite.get() != NULL) mSprite->Update(t);
 	// If in world, wrap position
 	if (mWorld) { mWorld->WrapXY(mPosition.x, mPosition.y); }
+	if (mPosition.x > 600) mPosition.x -= 1200;
+	if (mPosition.x < -600) mPosition.x += 1200;
+	if (mPosition.y > 400) mPosition.y -= 800;
+	if (mPosition.y < -400) mPosition.y += 800;
 }
 
 /** Set up rendering system ready to render object. */

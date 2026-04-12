@@ -13,7 +13,8 @@ class Player : public IGameWorldListener
 public:
 	Player() { mLives = 3; }
 	virtual ~Player() {}
-
+	int GetLives() { return mLives; }
+	void AddLife() { mLives += 1; }
 	void OnWorldUpdated(GameWorld* world) {}
 
 	void OnObjectAdded(GameWorld* world, shared_ptr<GameObject> object) {}
@@ -33,7 +34,6 @@ public:
 
 	void FirePlayerKilled()
 	{
-		// Send message to all listeners
 		for (PlayerListenerList::iterator lit = mListeners.begin();
 			lit != mListeners.end(); ++lit) {
 			(*lit)->OnPlayerKilled(mLives);

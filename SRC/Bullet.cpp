@@ -31,7 +31,7 @@ void Bullet::Update(int t) {
 }
 // Collision detection using BoundingSpheres
 bool Bullet::CollisionTest(shared_ptr<GameObject> o) {
-	// Uses Run-Time Type Information (RTTI) to ensure bullets only test for collisions against all types of asteroids
+	// Uses Run Time Type Information (RTTI) to ensure bullets only test for collisions against all types of asteroids
 	if (o->GetType() != GameObjectType("Asteroid")) return false;
 	// Lab 03: Null pointer checks before testing shapes
 	if (mBoundingShape.get() == NULL) return false;

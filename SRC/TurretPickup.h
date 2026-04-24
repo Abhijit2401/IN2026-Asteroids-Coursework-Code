@@ -4,8 +4,7 @@
 
 #include "GameObject.h"
 
-class TurretPickup : public GameObject
-{
+class TurretPickup : public GameObject {
 public:
 	TurretPickup(GLVector3f p);
 	bool mPickedUp;

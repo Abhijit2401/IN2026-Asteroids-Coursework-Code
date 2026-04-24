@@ -4,8 +4,8 @@
 
 #include "GameObject.h"
 
-class SpiralPickup : public GameObject
-{
+// Inherits GameObject class
+class SpiralPickup : public GameObject {
 public:
 	SpiralPickup(GLVector3f p);
 	bool mPickedUp;
